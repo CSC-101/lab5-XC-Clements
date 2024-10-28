@@ -13,6 +13,7 @@ from data import Time, Point
 
 
 # Part 3
+#takes two times in the type of Time, and adds them together, returning another Time value
 def time_add(time1:Time, time2:Time) -> Time:
     #initializes an output
     output_time = Time(0,0,0)
@@ -27,6 +28,7 @@ def time_add(time1:Time, time2:Time) -> Time:
     return output_time
 
 # Part 4
+#determines if a given list is in descending order and outputs a True if it is and False if otherwise
 def is_descending(input_list:list[float]) -> bool:
     for n in range(len(input_list) - 1):
         if input_list[n+1] >= input_list[n]:
@@ -34,6 +36,7 @@ def is_descending(input_list:list[float]) -> bool:
     return True
 
 # Part 5
+#Finds the largest value in a list between a range of two given indices and returns an int if at all possible
 def largest_between(input_list:list[int], lower:int, upper:int) -> Optional[int]:
     largest = 0
     if upper < lower:
@@ -46,12 +49,13 @@ def largest_between(input_list:list[int], lower:int, upper:int) -> Optional[int]
 list_a = [40, 10, 15, 5, 20, 35]
 
 # Part 6
-
+#finds the distance between two given points using the pythag theorum, returning a float
 def distance(point_a: Point, point_b: Point) -> float:
     length = abs(point_a.x - point_b.x)
     height = abs(point_a.y - point_b.y)
     return sqrt((length ** 2) +
                 (height ** 2))
+#finds the Point in the list given that is the furthest from the origin and returns the index of the furthest point
 def furthest_from_origin(point_list:list[Point]) -> Optional[int]:
     if point_list == []:
         return None

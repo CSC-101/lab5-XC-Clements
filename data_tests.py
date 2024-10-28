@@ -39,14 +39,14 @@ class TestCases(unittest.TestCase):
     #### Point tests
     def test_Point_1(self):
         point = data.Point(7, 20)
-        self.assertAlmostEqual(7, point.x)
-        self.assertAlmostEqual(20, point.y)
+        self.assertEqual(7, point.x)
+        self.assertEqual(20, point.y)
 
 
     def test_Point_2(self):
         point = data.Point(4, 19)
-        self.assertAlmostEqual(4, point.x)
-        self.assertAlmostEqual(19, point.y)
+        self.assertEqual(4, point.x)
+        self.assertEqual(19, point.y)
 
 
     def test_Point_eq_1(self):
